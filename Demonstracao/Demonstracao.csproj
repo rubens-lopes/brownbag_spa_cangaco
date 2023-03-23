@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <WarningsAsErrors>Nullable</WarningsAsErrors>
+    <AssemblyName>SpaCangaço.Demonstração</AssemblyName>
+    <RootNamespace>SpaCangaço.Demonstração</RootNamespace>
+    <Company />
+    <Product />
+  </PropertyGroup>
+
+</Project>
