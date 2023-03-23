@@ -1,0 +1,10 @@
+{
+  "name": "@spa.cangaco/demostracao",
+  "private": true,
+  "scripts": {
+    "dev:legado": "tailwindcss --input ./src/estilos.css --output ../wwwroot/estilos.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}

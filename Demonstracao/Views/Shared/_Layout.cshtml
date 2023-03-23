@@ -1,0 +1,11 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>SPA a moda do cangaço</title>
+	<link rel="stylesheet" href="/estilos.css" asp-append-version="true"/>
+</head>
+<body class="text-2xl grid min-h-screen">
+@RenderBody()
+</body>
+@await RenderSectionAsync("scripts", false)
+</html>

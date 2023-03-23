@@ -11,4 +11,8 @@
     <Product />
   </PropertyGroup>
 
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Cangaço\Index.cshtml" />
+  </ItemGroup>
+
 </Project>
