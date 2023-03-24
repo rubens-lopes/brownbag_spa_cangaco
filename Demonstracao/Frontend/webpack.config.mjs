@@ -6,20 +6,20 @@ export default {
   devtool: `inline-source-map`,
 	watch: true,
   entry: {
-		'legado.js': `./src/legado.js`, 
-		// 'cangaco.js': `./src/cangaco.js`,
+		legado: `./src/legado.js`, 
+		cangaco: `./src/cangaco.js`,
 	},
   plugins: [
     new MiniCssExtractPlugin(),
   ],
   output: {
-    filename: `[name]`,
+    filename: `[name].js`,
     path: resolve(process.cwd(), `../wwwroot/`),
   },
   module: {
     rules: [
       {
-        test: /\.scss$/i,
+        test: /\.sass$/i,
         use: [
           MiniCssExtractPlugin.loader,
           `css-loader`,
