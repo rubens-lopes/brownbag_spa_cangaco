@@ -2,9 +2,20 @@
   "name": "@spa.cangaco/demostracao",
   "private": true,
   "scripts": {
-    "dev:legado": "tailwindcss --input ./src/estilos.css --output ../wwwroot/estilos.css --watch"
+		"dev:mvc": "dotnet watch --project ../",
+		"dev:webpack": "webpack",
+		"dev:tailwindcss": "tailwindcss --input ./src/estilos.css --output ../wwwroot/estilos.css --watch",
+		"dev": "concurrently -c auto pnpm:dev:*"
   },
   "devDependencies": {
-    "tailwindcss": "^3.2.7"
+    "concurrently": "^7.6.0",
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.5",
+    "sass": "^1.60.0",
+    "sass-loader": "^13.2.1",
+    "tailwindcss": "^3.2.7",
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
   }
 }
