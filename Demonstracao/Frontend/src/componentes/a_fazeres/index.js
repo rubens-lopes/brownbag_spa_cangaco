@@ -1,6 +1,7 @@
 import Componente from '&/motor/componente'
 import Visualização from './visualizacao'
 import './estilos.sass'
+import Cabeçalho from '../cabecalho'
 
 export default class A_Fazeres extends Componente {
 	constructor() {
@@ -8,6 +9,6 @@ export default class A_Fazeres extends Componente {
 	}
 
 	hidratar({ modelo, visualização }) {
-		console.log(`hidratado`);
+		new Cabeçalho({ valor: `A fazeres`})
 	}
 }

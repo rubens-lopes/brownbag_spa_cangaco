@@ -8,7 +8,7 @@ export function vincular({
     visualização.desenhar(modelo)
     hidratar({ visualização, modelo })
   }
-debugger
+
   const representante = new Proxy(modelo, {
     get(alvo, propriedade) {
       const valorEsperado = alvo[propriedade]
