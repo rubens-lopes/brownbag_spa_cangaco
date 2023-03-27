@@ -5,7 +5,7 @@ export default class Componente {
 		this.modelo = vincular({
 			visualização,
 			modelo,
-			hidratar: this.hidratar,
+			hidratar: this.hidratar.bind(this),
 			propriedades,
 		})
 	}
