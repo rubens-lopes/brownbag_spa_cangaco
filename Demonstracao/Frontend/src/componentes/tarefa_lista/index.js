@@ -3,8 +3,8 @@ import Visualização from './visualizacao'
 import './estilos.sass'
 
 export default class Tarefa_Lista extends Componente {
-	constructor({ tarefa, id }) {
-		super(new Visualização(`[data-tarefa-lista-bb="${id}"]`), { tarefa, id })
+	constructor({ tarefa, id, ao_marcar_como_feita }) {
+		super(new Visualização(`[data-tarefa-lista-bb="${id}"]`), { tarefa, id, ao_marcar_como_feita })
 	}
 
 	hidratar({ modelo, visualização }) {
@@ -13,7 +13,7 @@ export default class Tarefa_Lista extends Componente {
 			?.addEventListener(`submit`, (event) => {
 				event.preventDefault()
 
-				console.log(modelo.id)
+				modelo.ao_marcar_como_feita && modelo.ao_marcar_como_feita(modelo.id)
 			})
 	}
 }
