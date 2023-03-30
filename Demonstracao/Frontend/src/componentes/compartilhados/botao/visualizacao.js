@@ -6,4 +6,8 @@ export default class Visualização_Botão extends Visualização {
 			<button type="${tipo}">${texto}</button>
 		`
 	}
+
+	get botão() {
+		return this.elemento.querySelector(`button`)
+	}
 }

@@ -3,9 +3,18 @@ import Visualização from './visualizacao'
 import './estilos.sass'
 
 export default class Botão extends Componente {
-	constructor({ tipo, texto }) {
-		super(new Visualização(`[data-botão-bb]`), { tipo, texto })
+	constructor({ id = ``, tipo = `button`, texto, ao_clicar } = {}) {
+		super(new Visualização(`[data-botão-bb="${id}"]`), { tipo, texto })
+
+		this.ao_clicar = ao_clicar
 	}
 
-	hidratar() {}
+	hidratar({ visualização }) {
+		visualização.botão.addEventListener(`click`, (event) => {
+			if(!this.ao_clicar) return
+			
+			event.preventDefault()
+			this.ao_clicar()
+		})
+	}
 }
