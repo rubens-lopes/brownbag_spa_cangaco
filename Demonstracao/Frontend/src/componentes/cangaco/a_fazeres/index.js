@@ -17,8 +17,8 @@ export default class A_Fazeres extends Componente {
 	}
 
 	hidratar({ modelo }) {
-		new Cabeçalho({ valor: `A fazeres`})
-		new Formulário({ ao_submeter: modelo.criar })
+		new Cabeçalho({ valor: `A fazeres` })
+		new Formulário()
 		new Lista_De_Tarefas({ tarefas: modelo.tarefas })
 	}
 
