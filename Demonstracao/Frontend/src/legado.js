@@ -16,14 +16,24 @@ const obter_html = (tarefas) => {
 }
 
 ao_carregar_dom(() => {
-	const tarefas = [
+	const tarefas_iniciais = [
 		`tirar o lixo`,
 		`alimentar o gato`,
 		`passear com o cachorro`,
 	]
 
+	let tarefas = tarefas_iniciais.concat()
+
 	const adicionar = document.querySelector(`#adicionar`)
 	const lista = document.querySelector(`ul`)
+	const botão_restaurar = document.querySelector(`button#restaurar`)
+
+	botão_restaurar.addEventListener(`click`, (event) => {
+		event.preventDefault()
+		tarefas = tarefas_iniciais.concat()
+		desenhar_lista()
+		hidratar_lista()
+	})
 
 	adicionar.addEventListener(`submit`, (event) => {
 		event.preventDefault()
