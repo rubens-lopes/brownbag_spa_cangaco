@@ -1,9 +1,9 @@
 import Componente from '&/motor/componente'
 import Visualização from './visualizacao'
 import './estilos.sass'
-import Cabeçalho from '&/componentes/cabecalho'
-import Formulário from '&/componentes/formulario_tarefa'
-import Lista_De_Tarefas from '&/componentes/lista_de_tarefas'
+import Cabeçalho from '&/componentes/compartilhados/cabecalho'
+import Formulário from '&/componentes/compartilhados/formulario_tarefa'
+import Lista_De_Tarefas from '&/componentes/compartilhados/lista_de_tarefas'
 import Modelo from './modelo'
 
 export default class A_Fazeres extends Componente {

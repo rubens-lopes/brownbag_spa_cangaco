@@ -1,6 +1,6 @@
 import Componente from '&/motor/componente'
 import Visualização from './visualizacao'
-import Tarefa_Lista from '&/componentes/tarefa_lista'
+import Tarefa_Lista from '&/componentes/compartilhados/tarefa_lista'
 import './estilos.sass'
 
 export default class Lista_De_Tarefas extends Componente {
