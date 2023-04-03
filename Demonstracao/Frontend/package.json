@@ -2,10 +2,10 @@
   "name": "@spa.cangaco/demostracao",
   "private": true,
   "scripts": {
-		"dev:mvc": "dotnet watch --project ../",
-		"dev:webpack": "webpack",
-		"dev:tailwindcss": "tailwindcss --input ./src/estilos.css --output ../wwwroot/estilos.css --watch",
-		"dev": "concurrently -c auto pnpm:dev:*"
+    "dev:mvc": "dotnet watch --project ../",
+    "dev:webpack": "webpack",
+    "dev:tailwindcss": "tailwindcss --input ./src/estilos.css --output ../wwwroot/estilos.css --watch",
+    "dev": "concurrently -c auto pnpm:dev:*"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",
@@ -17,5 +17,8 @@
     "webpack": "^5.76.3",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.13.1"
+  },
+  "dependencies": {
+    "pubsub-js": "^1.9.4"
   }
 }

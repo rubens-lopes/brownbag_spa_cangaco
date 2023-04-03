@@ -11,5 +11,5 @@ export default class Visualização {
     this.elemento.innerHTML = this.obter_visualização(modelo)
   }
 
-	obter_visualização(modelo) { throw new Error(`hidratar não foi implementado`) }
+	obter_visualização(modelo) { throw new Error(`obter visualização não foi implementado`) }
 }

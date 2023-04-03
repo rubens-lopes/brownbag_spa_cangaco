@@ -1,10 +1,13 @@
+import PubSub from 'pubsub-js'
 import Componente from '&/motor/componente'
 import Visualização from './visualizacao'
 import './estilos.sass'
 
+export const MARCAR_COMO_FEITA = `9cc474dd-61e8-449c-98a6-a225a060f2b9`
+
 export default class Tarefa_Lista extends Componente {
-	constructor({ tarefa, id, ao_marcar_como_feita }) {
-		super(new Visualização(`[data-tarefa-lista-bb="${id}"]`), { tarefa, id, ao_marcar_como_feita })
+	constructor({ tarefa, id }) {
+		super(new Visualização(`[data-tarefa-lista-bb="${id}"]`), { tarefa, id })
 	}
 
 	hidratar({ modelo, visualização }) {
@@ -13,7 +16,7 @@ export default class Tarefa_Lista extends Componente {
 			?.addEventListener(`submit`, (event) => {
 				event.preventDefault()
 
-				modelo.ao_marcar_como_feita && modelo.ao_marcar_como_feita(modelo.id)
+				PubSub.publishSync(MARCAR_COMO_FEITA, modelo.id)
 			})
 	}
 }

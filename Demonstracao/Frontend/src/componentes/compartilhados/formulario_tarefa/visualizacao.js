@@ -5,7 +5,7 @@ export default class Visualização_Formulário_Tarefa extends Visualização {
 		return `
 		<form>
 			<div data-entrada-de-texto-bb></div>
-			<div data-botão-bb></div>
+			<div data-botão-bb="formulário_tarefa"></div>
 		</form>
 		`
 	}
